@@ -11,7 +11,7 @@ output:
 
 We do some analysis to the data from a personal activity monitoring device. This device collects data at 5 minute intervals through out the day. The data consists of two months of data from an anonymous individual collected during the months of October and November, 2012 and include the number of steps taken in 5 minute intervals each day.
 
-##Loading and preprocessing the data
+## Loading and preprocessing the data
 
 We first load the data and take a closer look on the variables.
 
@@ -49,7 +49,7 @@ It seems the date variable is in the wrong format, so we transform it into a Dat
 ActMonitoring$date = as.Date(ActMonitoring$date)
 ```
 
-##Total Number of Steps Taken per Day
+## Total Number of Steps Taken per Day
 
 Then, we create a summary vector consisting of the total number of steps taken each day. As there are some NA in the steps variable, we use the sum(...,na.rm = T) as an anonymous function.
 
@@ -83,7 +83,7 @@ median(StepsPerDay)
 ## [1] 10395
 ```
 
-##Average Daily Activity Pattern
+## Average Daily Activity Pattern
 
 Next, we create a summary vector consisting of the average number of steps taken in each interval. The averaging is done across all day.
 
@@ -114,7 +114,7 @@ which.max(StepsPerInterval)
 ```
 The 5-minutes interval with the maximum average number of steps is the 835 interval. This interval has 104 steps on average.
 
-##Imputing Missing Values
+## Imputing Missing Values
 
 We summarise the number of missing-values for each columns
 
@@ -190,7 +190,7 @@ median(StepsPerDay)
 ## [1] 10766.19
 ```
 
-##Differences in Activity Patterns Between Weekdays and Weekends
+## Differences in Activity Patterns Between Weekdays and Weekends
 
 Finally, we would like to see the difference between the activity patterns between weekdays and weekends. To do this, we first create a new factor variable indicating whether a given date is a weekday or a weekend day.
 
